@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const ClubContainer = styled.div`
   width: 100%;
+  background-color: #fff;
   height: calc(100vh - 80px);
   padding-bottom: 80px;
   /* margin-bottom: 80px; */
@@ -78,7 +79,7 @@ export const ClubDetailTitle = styled.div`
   padding: 5%;
 `;
 
-export const ClubDetailImage = styled.img`
+export const ClubDetailImage = styled(Image)`
   width: 90%;
   margin: 0 5%;
   height: 200px;
