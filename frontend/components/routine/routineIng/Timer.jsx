@@ -34,8 +34,12 @@ export default function Timer() {
   }, [timeLeft, isPaused]);
 
   useEffect(() => {
+    // console.log(zeroCount);
     if (zeroCount === 3) {
-      router.replace("/routine/routineFinish");
+      localStorage.setItem("isRoutineFinished", "true");
+      router.replace("/routine/routineFinish").then(() => {
+        window.location.reload();
+      });
     }
   }, [zeroCount]);
 
